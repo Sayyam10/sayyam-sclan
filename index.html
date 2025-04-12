@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayyam's Clan</title>
     <style>
-        /* General Reset and Body Styling */
         * {
             margin: 0;
             padding: 0;
@@ -33,28 +32,41 @@
             top: 0;
             z-index: 1000;
             background-color: #2a2d3e;
-            padding: 15px 20px;
+            padding: 15px 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            overflow-x: auto;
+            white-space: nowrap;
         }
         nav ul {
             display: flex;
-            justify-content: center;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
             list-style: none;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 10px;
+        }
+        nav ul::-webkit-scrollbar {
+            display: none;
         }
         nav ul li {
-            margin: 0 15px;
+            flex: 0 0 auto;
+            margin: 0 10px;
+            white-space: nowrap;
         }
         nav a {
             text-decoration: none;
             color: #a8dadc;
             font-size: 1rem;
             transition: color 0.3s;
+            padding: 5px 10px;
+            display: inline-block;
         }
         nav a:hover {
             color: #ffba08;
         }
         section {
-            padding: 70px 20px 50px; /* Increased top padding to prevent overlap */
+            padding: 50px 20px;
             margin: 20px auto;
             max-width: 1200px;
         }
@@ -100,7 +112,6 @@
             margin-top: 20px;
             font-size: 0.9rem;
         }
-        /* Welcome Popup Styling */
         .popup {
             position: fixed;
             top: 0;
@@ -160,18 +171,17 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#finance"><i class="fas fa-wallet"></i> Finance</a></li>
-            <li><a href="#play"><i class="fas fa-gamepad"></i> Play & Win</a></li>
-            <li><a href="#investment"><i class="fas fa-piggy-bank"></i> Investments</a></li>
-            <li><a href="#shopping"><i class="fas fa-shopping-cart"></i> Shopping Deals</a></li>
-            <li><a href="#services"><i class="fas fa-cogs"></i> Additional Services</a></li>
+            <li><a href="#finance">Finance</a></li>
+            <li><a href="#play">Play & Win</a></li>
+            <li><a href="#investment">Investments</a></li>
+            <li><a href="#shopping">Shopping Deals</a></li>
+            <li><a href="#services">Additional Services</a></li>
         </ul>
     </nav>
 
     <section id="finance">
         <h2>💳 Financial Opportunities</h2>
         <div class="card-container">
-
             <div class="card">
                 <a href="https://funngro.page.link/2ogx">Kotak 811</a>
                 <p>Start your banking journey today.</p>
@@ -188,9 +198,9 @@
                 <a href="https://funngro.page.link/HwKq">PayZapp</a>
                 <p>Empower your cashless transactions today.</p>
             </div>
-            <!-- Additional financial projects can be added here -->
         </div>
     </section>
+
     <section id="play">
         <h2>🏆 Play & Win</h2>
         <div class="card-container">
@@ -208,20 +218,19 @@
             </div>
             <div class="card">
                 <a href="https://funngro.page.link/rxUV">Gameplay - Myteam11</a>
-                <p> Build your team and rise to the top..</p>
+                <p>Build your team and rise to the top..</p>
             </div>
             <div class="card">
                 <a href="https://funngro.page.link/KhYS">Tento App promotion</a>
-                <p>Game On,   Anything.</p>
+                <p>Game On, Anything.</p>
             </div>
             <div class="card">
                 <a href="https://funngro.page.link/JVv9">Stan</a>
-                <p> Watch More.Feel More</p>
+                <p>Watch More.Feel More</p>
             </div>
-
-            <!-- Additional gaming projects can be added here -->
         </div>
     </section>
+
     <section id="investment">
         <h2>💰 Investment Opportunities</h2>
         <div class="card-container">
@@ -233,10 +242,9 @@
                 <a href="https://funngro.page.link/vxf6">Tide Account</a>
                 <p>Open your account to explore benefits.</p>
             </div>
-
-            <!-- Additional investment projects can be added here -->
         </div>
     </section>
+
     <section id="shopping">
         <h2>🛍 Best Shopping Deals</h2>
         <div class="card-container">
@@ -254,20 +262,7 @@
             </div>
         </div>
     </section>
-    <footer>
 
-    </footer>
-    <script>
-        const popup = document.getElementById("welcomePopup");
-
-        window.onload = function() {
-            popup.classList.add("active");
-        };
-
-        function closePopup() {
-            popup.classList.remove("active");
-        }
-    </script>
     <section id="services">
         <h2>🔧 Additional Services</h2>
         <div class="card-container">
@@ -279,9 +274,18 @@
                 <a href="https://meet.google.com/cfw-epmg-upu">New User Meeting</a>
                 <p>Get guidance on how to complete this project effectively.</p>
             </div>
-            <!-- Add more services here if needed -->
         </div>
         <p>&copy; 2025 Sayyam's Clan. All Rights Reserved.</p>
     </section>
+
+    <script>
+        const popup = document.getElementById("welcomePopup");
+        window.onload = function () {
+            popup.classList.add("active");
+        };
+        function closePopup() {
+            popup.classList.remove("active");
+        }
+    </script>
 </body>
 </html>
